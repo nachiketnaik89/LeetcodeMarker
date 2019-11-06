@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "LeetCode Marker",
+    "description": "trakcs LeetCode Completed Problems",
+    "version": "1.0",
+
+    "browser_action": {
+        "dafault_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/problemset/all/", "https://leetcode.com/tag/*"],
+            "js": ["main.js", "jquery-1.12.0.min.js"]
+    }
+  ],
+    "permissions": [
+    "storage",
+    "tabs",
+    "https://www.leecode.com/*"
+  ]
+
+}
